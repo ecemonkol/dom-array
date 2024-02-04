@@ -1,0 +1,47 @@
+button {
+    color: white;
+    height: 40px;
+    width: 120px;
+    background-color: tomato;
+    font-family: monospace;
+    border: none;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+}
+
+.teams {
+    display: grid;
+    row-gap: 5px;
+    margin-top: 20px;
+    font-family: monospace;
+    margin-left: 150px
+}
+
+.scores {
+    display: grid;
+    row-gap: 5px;
+    margin-top: 20px;
+    font-family: monospace;
+    margin-left: 150px
+}
+.container {
+    display: flex;
+}
+body {
+    display: flex;
+    flex-direction: column;
+}
+h1 {
+    font-family: monospace;
+    font-size: 40px;
+    color: rgb(48, 48, 48)
+}
+
+.button-container {
+    display: grid;
+    row-gap: 20px;
+    margin-top: 40px;
+}
