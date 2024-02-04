@@ -94,4 +94,25 @@ function doubleScore() {
         scoreElements[i].textContent = doubledScore;
     }
 }
-  
+
+
+function showFinalists() {
+    console.log(teams);
+    const sortedTeams = [...teams].sort((a, b) => b.score - a.score);
+
+    // Clear existing elements from the DOM
+    teamList.innerHTML = '';
+    scoreList.innerHTML = '';
+
+    // Display only the top 3 teams
+    for (let i = 0; i < 3; i++) {
+        const listItem = document.createElement('p');
+        listItem.textContent = sortedTeams[i].name;
+        teamList.appendChild(listItem);
+
+        const teamScore = document.createElement('p');
+        teamScore.textContent = sortedTeams[i].score;
+        scoreList.appendChild(teamScore);
+    }
+}
+
