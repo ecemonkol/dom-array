@@ -11,8 +11,8 @@
     <div class="container">
         <aside>
             <div class="button-container">
-                <button>Show Scores</button>
-                <button>Delete the Lowest</button>
+                <button onclick="toggleShowHide()" id="toggle">Show / Hide Scores</button>
+                <button onclick="deleteLowestScore()">Delete the Lowest</button>
                 <button>Double Score</button>
                 <button>Show only finalists</button>
                 <button>Sort by Highest</button>
@@ -23,25 +23,12 @@
         <main>
            <div class="teams">
                <h2>Teams</h2>
-               <p>Team Michu</p>
-               <p>Team Michu</p>
-               <p>Team Michu</p>
-               <p>Team Michu</p>
-               <p>Team Michu</p>
-               <p>Team Michu</p>
-               <p>Team Michu</p>
+               <div class="teamList"></div>
            </div>
            <div class="scores">
-            <h2>Scores</h2>
-            <p>Team Michu</p>
-            <p>Team Michu</p>
-            <p>Team Michu</p>
-            <p>Team Michu</p>
-            <p>Team Michu</p>
-            <p>Team Michu</p>
-            <p>Team Michu</p>
-        </div>
-
+            <h2>Score</h2>
+               <div class="scoreList"></div>
+            </div>
         </main>
 
     </div>

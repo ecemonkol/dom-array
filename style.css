@@ -10,6 +10,8 @@ button {
 main {
     display: flex;
     flex-direction: row;
+    color: rgb(48, 48, 48);
+
 }
 
 .teams {
@@ -17,7 +19,7 @@ main {
     row-gap: 5px;
     margin-top: 20px;
     font-family: monospace;
-    margin-left: 150px
+    margin-left: 150px;
 }
 
 .scores {
@@ -27,6 +29,13 @@ main {
     font-family: monospace;
     margin-left: 150px
 }
+
+.teamList, .scoreList  {
+    display: grid;
+    row-gap: 10px;
+    color: rgb(48, 48, 48)
+}
+
 .container {
     display: flex;
 }
