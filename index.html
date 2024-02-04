@@ -15,9 +15,8 @@
                 <button onclick="deleteLowestScore()">Delete the Lowest</button>
                 <button onclick="doubleScore()">Double Score</button>
                 <button onclick="showFinalists()">Show only finalists</button>
-                <button>Sort by Highest</button>
-                <button>Calculate Total Score</button> 
-                <button>Show all teams</button>
+                <button onclick="sortByHighest()">Sort by Highest</button>
+                <button onclick="totalScore()">Calculate Total Score</button> 
               </div>
         </aside>
         <main>
@@ -29,10 +28,11 @@
             <h2>Score</h2>
                <div class="scoreList"></div>
             </div>
+            
         </main>
-
+        
     </div>
-    
+    <h4 class="totalScore" id="total"></h4>
 
     
     

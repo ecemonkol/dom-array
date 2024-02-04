@@ -116,3 +116,38 @@ function showFinalists() {
     }
 }
 
+const totalDisplay = document.querySelector('#total');
+let totalAmount = 0;
+
+function totalScore() {
+    const scoreElements = document.querySelectorAll('.scoreList p');
+
+    for (let i = 0; i < scoreElements.length; i++) {
+        totalAmount += parseInt(scoreElements[i].textContent);
+    }
+
+    console.log(totalAmount);
+   
+    totalDisplay.textContent = `Total: ${totalAmount}`;
+}
+
+function sortByHighest() {
+    const sortedTeams = [...teams].sort((a, b) => b.score - a.score);
+
+    // Clear existing elements from the DOM
+    teamList.innerHTML = '';
+    scoreList.innerHTML = '';
+
+    // Display all teams sorted by highest score
+    for (let i = 0; i < sortedTeams.length; i++) {
+        const listItem = document.createElement('p');
+        listItem.textContent = sortedTeams[i].name;
+        teamList.appendChild(listItem);
+
+        const teamScore = document.createElement('p');
+        teamScore.textContent = sortedTeams[i].score;
+        scoreList.appendChild(teamScore);
+    }
+}
+
+
