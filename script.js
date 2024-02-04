@@ -68,7 +68,30 @@ function toggleShowHide() {
 function deleteLowestScore() {
     console.log(teams);
     teams.sort((a, b) => b.score - a.score);
-    const lowest = teams[6]
-    console.log(lowest)
-    document.remove(lowest)
+    const lowest = teams[teams.length - 1];
+    console.log("Lowest Score Team:", lowest);
+
+    const indexOfLowest = teams.findIndex(item => item === lowest);
+
+    if (indexOfLowest !== -1) {
+        teams.splice(indexOfLowest, 1);
+        teamList.removeChild(teamList.children[indexOfLowest]);
+        scoreList.removeChild(scoreList.children[indexOfLowest]);
+    }
+
+    console.log(teams);
 }
+
+
+function doubleScore() {
+    const scoreElements = document.querySelectorAll('.scoreList p');
+    console.log(scoreElements)
+  
+
+    for (let i = 0; i < scoreElements.length; i++) {
+        const currentScore = parseInt(scoreElements[i].textContent);
+        const doubledScore = currentScore * 2;
+        scoreElements[i].textContent = doubledScore;
+    }
+}
+  
